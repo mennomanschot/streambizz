@@ -20,32 +20,8 @@ export default function Form(props) {
     event.preventDefault();
   }
 
-  // COMPLICATED
-  // add const formFields in app.js to handle the available formfields
-  // > add a field type, in a form with properties, to formfields : {id (automated?), name, label, type } <Add Field Type>
-  // redux action ADD_FIELD_TYPE
-  // Upon new field type a button should appear > Add XX Field >> adds 
-
-
-//   const fieldHAndlers = props.fields.map(function (f) {
-// let fieldHandler = null
-
-//     return (
-//       fieldHandler = [f.name, setName] = useState('')
-//       // const [age, setAge] = useState('')
-      
-//       function handleNameChange(event) {
-//         setName( event.target.value);
-//       }
-//       function handleAgeChange(event) {
-//         setAge( event.target.value);
-//       })
-        
-//   })
-
-
+  // handles making available of fieldTypes based on schema
   const formFields = props.fields.map(function (f) {
-    
     let fieldValue = ''
     let fieldChangeHandler = ''
     
@@ -76,10 +52,10 @@ export default function Form(props) {
     const fieldId = f.fieldId
 
     const formField = formFields.find( function(formField){ 
-      return formField.key === fieldId;                      // select right fieldType from formFields, based on layout fieldId
+      return formField.key === fieldId;                      // select correct fieldType from formFields, based on layout fieldId
     });
     
-    return (                                                 // render right formFields in order of layout Array
+    return (                                                 // render correct formFields in order of layout Array
       <td key={index} className={'Form-td'}>
       {formField}
       </td>
