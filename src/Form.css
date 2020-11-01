@@ -1,0 +1,26 @@
+
+.Form-td { 
+  display: inline-block;
+  text-overflow: ellipsis; 
+  word-wrap: break-word;
+  padding: 5px;
+  float: left;
+  margin-right:20px;
+  text-align: left;
+}
+.Form-btn {
+margin: 10px;
+}
+.Form-label {
+  display: block;
+  font-size:small;
+  font-weight: bold;
+}
+
+.Form-input {
+  display: block;
+  margin-top: 5px;
+}
+.Form-inputwrapper {
+  
+}
